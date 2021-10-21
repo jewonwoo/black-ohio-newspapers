@@ -64,3 +64,7 @@ names(locations) <- tolower(names(locations))
 names(locations) <- gsub(" ", "_", names(locations))
 
 write_csv(locations, "data/locations.csv")
+
+# Environment cleanup
+rm(agents, ad_1840s, ad_1850s, ad_1860s, ad_1870s, ad_1880s, ad_1890s, topic_1840s, 
+   topic_1850s, topic_1860s, topic_1870s, topic_1880s, topic_1890s)
