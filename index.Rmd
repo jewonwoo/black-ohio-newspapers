@@ -1,0 +1,63 @@
+---
+title: "Black Ohio Newspapers"
+author: "Jewon Woo"
+date: "11/17/2021"
+output: 
+  rmarkdown::html_document:
+    theme: readable
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(plotly)
+library(ggthemes)
+```
+
+## Introduction
+
+We could include introductory remarks here.
+
+# Topics 
+
+```{r echo=FALSE, out.height="100%", out.width="100%"}
+stacked_plotly
+```
+
+
+```{r echo=FALSE, out.height="100%", out.width="100%"}
+top_plotly
+```
+
+## Advertisements
+
+```{r echo=FALSE, out.height="100%", out.width="100%"}
+ads_stacked_plotly
+```
+
+```{r echo=FALSE, out.height="100%", out.width="100%"}
+ads_plotly
+```
+
+Maybe a treemap becomes a way to better see this data? 
+
+```{r echo=FALSE, warning=FALSE, out.height="100%", out.width="100%"}
+treemap(
+  advertisements, 
+  index=c("decade","category"),
+  vSize="frequency",
+  type="index",
+  palette = "Set2",
+  bg.labels=c("white"),
+  align.labels=list(
+    c("left", "top"),
+    c("right", "bottom")
+  )
+) 
+```
+
+# Mapping
+
+```{r echo=FALSE}
+map
+```
