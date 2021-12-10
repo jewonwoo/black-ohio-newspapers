@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Title  }}</title>
+
+{{$style := resources.Get "simple.min.css"}}
+{{if (eq (getenv "NODE_ENV") "production")}}
+    {{$style = $style | minify | fingerprint | resources.PostProcess}}
+{{end}}
+<link rel="stylesheet" href=" {{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}" />
+
+</head>
