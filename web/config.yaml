@@ -1,0 +1,25 @@
+baseURL: 
+languageCode: en-us
+title: Black Ohio Newspapers
+theme: chnm
+
+menu:
+  main:
+    - name: "Home"
+      url: "/"
+      weight: 10
+    - name: "Topics"
+      url: "/topics"
+      weight: 20
+    - name: "Advertisements"
+      url: "/advertisements"
+      weight: 30
+    - name: "Data"
+      url: "/data"
+      weight: 40
+    - name: "Maps"
+      url: "/maps"
+      weight: 50
+    - name: "About"
+      url: "/about"
+      weight: 60
