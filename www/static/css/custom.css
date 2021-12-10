@@ -1,0 +1,18 @@
+/* Site customization */
+
+.logo {
+    float: left;
+    height: 2.25em;
+    width: calc(100% - 6em);
+    background: url("/images/rrchnm-logo.png") no-repeat;
+    background-size: contain;
+    background-position: bottom;
+  }
+
+.logo a {
+    height: 100%;
+    width: 100%; 
+    text-indent: -9999px;
+    text-align: left;
+    display: block;
+}
