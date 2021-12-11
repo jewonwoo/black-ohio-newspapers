@@ -2,4 +2,63 @@
 title: "Topics"
 ---
 
-fringilla potenti libero facilisis aptent. Vestibulum mi posuere
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+# Data prep
+# ---------------------------------------------
+library(tidyverse)
+library(readxl)
+
+# Topics
+topic_1840s <- read_xlsx("../data-raw/Topics - 1840s.xlsx")
+topic_1850s <- read_xlsx("../data-raw/Topics - 1850s.xlsx")
+topic_1860s <- read_xlsx("../data-raw/Topics - 1860s.xlsx")
+topic_1870s <- read_xlsx("../data-raw/Topics - 1870s.xlsx")
+topic_1880s <- read_xlsx("../data-raw/Topics - 1880s.xlsx")
+topic_1890s <- read_xlsx("../data-raw/Topics - 1890s.xlsx")
+
+topic_1840s$decade <- paste0("1840")
+topic_1850s$decade <- paste0("1850")
+topic_1860s$decade <- paste0("1860")
+topic_1870s$decade <- paste0("1870")
+topic_1880s$decade <- paste0("1880")
+topic_1890s$decade <- paste0("1890")
+
+topics <- rbind(topic_1840s, topic_1850s, topic_1860s, topic_1870s, topic_1880s, topic_1890s)
+names(topics) <- tolower(names(topics))
+```
+
+Explanation of plot...
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(plotly)
+library(ggthemes)
+
+# Chronological change of topics
+
+# Small multiples
+top <- ggplot(topics, aes(x = decade, y = frequency)) +
+  geom_bar(stat="identity") +
+  facet_wrap(~topic, ncol = 2) +
+  theme_minimal() +
+  theme(legend.position="none") +
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
+#top
+
+top_plotly <- ggplotly(top, width = 800, height = 800)
+top_plotly
+```
+
+Explanation of plot...
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+# Stacked
+top_stacked <- ggplot(topics, aes(x = decade, y = frequency, fill = topic)) +
+  geom_bar(stat="identity", color="black") +
+  scale_fill_brewer(type = "qual", palette = "Set3") +
+  theme(legend.position="none")
+#top_stacked
+
+stacked_plotly <- ggplotly(top_stacked, width = 800, height = 800)
+stacked_plotly
+```
