@@ -3,6 +3,10 @@ languageCode: en-us
 title: Black Ohio Newspapers
 theme: chnm
 
+params:
+  author: "Jewon Woo"
+  author_homepage: "https://chnm.gmu.edu"
+
 menu:
   main:
     - name: "Home"
