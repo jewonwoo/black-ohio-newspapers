@@ -1,4 +1,4 @@
-baseURL: 
+baseURL: "http://chnm-dev.jasonheppler.org"
 languageCode: en-us
 title: Black Ohio Newspapers
 theme: chnm
