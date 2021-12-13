@@ -1,0 +1,49 @@
+---
+title: "Maps"
+---
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+# Data prep
+# ---------------------------------------------
+library(tidyverse)
+library(readxl)
+
+# Periodical locations
+locations <- read_xlsx("../data-raw/Total Data - Combined Quoted Periodicals.xlsx")
+names(locations) <- tolower(names(locations))
+names(locations) <- gsub(" ", "_", names(locations))
+```
+
+Some explanatory text can go here to explain why the map is important and what users should understand.
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+# The following creates a simple leaflet map for displaying the location 
+# of quoted periodicals. 
+
+library(leaflet)
+library(htmltools)
+
+# We add jitter to help spread out overlapping points.
+locations$lon <- jitter(locations$lon, factor = 0.3) 
+locations$lat <- jitter(locations$lat, factor = 0.3) 
+
+# We apply a label to the points.
+locations$label <- with(locations, paste(
+  periodical, "(",location,")", " | ", "Mentions:", number_of_mentions))
+
+# Create the map. 
+map <- locations %>% leaflet() %>% 
+  addProviderTiles(providers$CartoDB.Positron) %>% 
+  addCircleMarkers(
+    lat=locations$lat, 
+    lng=locations$lon,
+    radius = 5,
+    stroke = FALSE,
+    fillOpacity = 0.5,
+    label = ~label,
+    options = popupOptions(closeButton = TRUE)
+  ) 
+
+# Display the map.
+map
+```

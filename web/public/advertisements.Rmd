@@ -1,0 +1,86 @@
+---
+title: "Advertisements"
+---
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+# Data prep 
+# ---------------------------------------------
+library(tidyverse)
+library(readxl)
+
+# Advertisements
+ad_1840s <- read_xlsx("../data-raw/Advertisements - 1840s.xlsx")
+ad_1850s <- read_xlsx("../data-raw/Advertisements - 1850s.xlsx")
+ad_1860s <- read_xlsx("../data-raw/Advertisements - 1860s.xlsx")
+ad_1870s <- read_xlsx("../data-raw/Advertisements - 1870s.xlsx")
+ad_1880s <- read_xlsx("../data-raw/Advertisements - 1880s.xlsx")
+ad_1890s <- read_xlsx("../data-raw/Advertisements - 1890s.xlsx")
+
+ad_1840s$decade <- paste0("1840")
+ad_1850s$decade <- paste0("1850")
+ad_1860s$decade <- paste0("1860")
+ad_1870s$decade <- paste0("1870")
+ad_1880s$decade <- paste0("1880")
+ad_1890s$decade <- paste0("1890")
+
+ad_1880s <- ad_1880s %>% rename(frequency = Frequency)
+
+advertisements <- rbind(ad_1840s, ad_1860s, ad_1870s, ad_1880s, ad_1890s)
+```
+
+Explanation of the plots...
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(ggthemes)
+library(plotly)
+library(viridis)
+library(treemap)
+library(d3Tree)
+
+# Chronological change of advertisements
+
+# Small multiples
+ads_multiple <- ggplot(advertisements, aes(x = decade, y = frequency)) +
+  geom_bar(stat="identity") +
+  facet_wrap(~category, ncol = 6) +
+  theme_minimal() +
+  theme(legend.position="none") +
+  theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
+#ads_multiple
+
+ads_plotly <- ggplotly(ads_multiple, width = 800, height = 800)
+ads_plotly
+```
+
+Explanation of the plot...
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+# Stacked
+ads_stacked <- ggplot(advertisements, aes(x = decade, y = frequency, fill = category)) +
+  geom_bar(stat="identity") +
+  theme(legend.position="none")
+#ads_stacked
+
+ads_stacked_plotly <- ggplotly(ads_stacked, width = 800, height = 800)
+ads_stacked_plotly
+```
+
+Some treemap explanation...
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+# Treemap
+ads_tree <- treemap(
+  advertisements, 
+  index=c("decade","category"),
+  vSize="frequency",
+  type="index",
+  palette = "Set2",
+  bg.labels=c("white"),
+  align.labels=list(
+    c("left", "top"),
+    c("right", "bottom")
+  )
+) 
+ads_tree
+```
