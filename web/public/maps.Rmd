@@ -14,7 +14,7 @@ names(locations) <- tolower(names(locations))
 names(locations) <- gsub(" ", "_", names(locations))
 ```
 
-Some explanatory text can go here to explain why the map is important and what users should understand.
+TEXT HERE: Some explanatory text can go here to explain why the map is important and what users should understand.
 
 ```{r echo=FALSE, warning=FALSE, message=FALSE}
 # The following creates a simple leaflet map for displaying the location 
