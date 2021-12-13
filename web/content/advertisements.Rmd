@@ -28,7 +28,7 @@ ad_1880s <- ad_1880s %>% rename(frequency = Frequency)
 advertisements <- rbind(ad_1840s, ad_1860s, ad_1870s, ad_1880s, ad_1890s)
 ```
 
-Explanation of the plots...
+TEXT HERE: Explanation of the plots...
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
 library(tidyverse)
@@ -53,7 +53,7 @@ ads_plotly <- ggplotly(ads_multiple, width = 800, height = 800)
 ads_plotly
 ```
 
-Explanation of the plot...
+TEXT HERE: Explanation of the plot...
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
 # Stacked
@@ -66,7 +66,7 @@ ads_stacked_plotly <- ggplotly(ads_stacked, width = 800, height = 800)
 ads_stacked_plotly
 ```
 
-Some treemap explanation...
+TEXT HERE: Some treemap explanation...
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
 # Treemap

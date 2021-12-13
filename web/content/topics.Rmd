@@ -27,7 +27,7 @@ topics <- rbind(topic_1840s, topic_1850s, topic_1860s, topic_1870s, topic_1880s,
 names(topics) <- tolower(names(topics))
 ```
 
-Explanation of plot...
+TEXT HERE: Explanation of plot...
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
 library(tidyverse)
@@ -49,7 +49,7 @@ top_plotly <- ggplotly(top, width = 800, height = 800)
 top_plotly
 ```
 
-Explanation of plot...
+TEXT HERE: Explanation of plot...
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
 # Stacked
