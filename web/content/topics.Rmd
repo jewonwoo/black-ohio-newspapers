@@ -1,5 +1,5 @@
 ---
-title: "Topics"
+title: "What the Subscribers Read"
 ---
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
@@ -27,7 +27,7 @@ topics <- rbind(topic_1840s, topic_1850s, topic_1860s, topic_1870s, topic_1880s,
 names(topics) <- tolower(names(topics))
 ```
 
-TEXT HERE: Explanation of plot...
+Topics in the newspapers hosted in this project show various aspects of early Black communities in Ohio. First, we can see what contemporary readers looked for in the newspaper. Their interests reveal the relationship that individual readers had with their community at familial, local, national, and even international levels. Second, newspaper topics tell what editors and publishers aimed at through its publication. Like most Black periodicals in the 19th century, publishing newspapers in Ohio was an unprofitable business, for which editors and publishers often had to maintain jobs other than working for the paper until Harry Smith as a full-time newspaperman started the Cleveland Gazette in 1883. Their occupations included barbers, preachers, educators, civil servants, librarians, business owners, but, of course, not limited to these. The diversity of the editors also implies that they helped the newspaper address manifold interests of various groups within the Black community. Third, topics in the newspaper lead us to hidden and anonymous contributors, most of whom were women and children, because their presence in public, even with only names in print, was considered inappropriate in the contemporaneous culture of the cult of womanhood. At last, the topic data reflects how Black Ohioans responded to historical moments in the 19th-century U.S. in order to achieve civil rights and demonstrate their civic qualification as model citizens. 
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
 library(tidyverse)
