@@ -1,5 +1,5 @@
 ---
-title: "Advertisements"
+title: "What the Advertisers Sold"
 ---
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
