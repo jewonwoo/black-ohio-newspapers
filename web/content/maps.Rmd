@@ -14,7 +14,9 @@ names(locations) <- tolower(names(locations))
 names(locations) <- gsub(" ", "_", names(locations))
 ```
 
-TEXT HERE: Some explanatory text can go here to explain why the map is important and what users should understand.
+Reprinting pieces from other periodicals and published texts was a common practice in nineteenth century print culture. Many of Black newspapers did not have enough agents, correspondents, and resources to maintain profitable publications, relying heavily on other periodicals as alternative news sources for first-hand reports. In the case of the Black newspapers in this project, total 287 different periodicals were reprinted, quoted, or mentioned, often more than once, in sixty-five issues out of the fourteen newspapers. However, for Black editors, the reprinting practice was not merely a way of saving the cost of newspaper publication. It, rather, was a savvy editorial strategy to establish journalistic authority through direct and indirect conversations among printed materials. Data visualization about reprinted periodicals in the early Black newspapers of Ohio also invites us to spatial thinking in which we can imagine African Americans on the constant move literally and metaphorically to publish and circulate newspapers. 
+
+
 
 ```{r echo=FALSE, warning=FALSE, message=FALSE}
 # The following creates a simple leaflet map for displaying the location 
