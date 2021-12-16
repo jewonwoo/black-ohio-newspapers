@@ -1,6 +1,6 @@
 baseURL: "http://chnm-dev.jasonheppler.org"
 languageCode: en-us
-title: Black Ohio Newspapers
+title: The Ohio Black Press in the 19th Century
 theme: chnm
 
 params:
@@ -12,17 +12,17 @@ menu:
     - name: "Home"
       url: "/"
       weight: 10
-    - name: "Topics"
+    - name: "What the Subscribers Read"
       url: "/topics"
       weight: 20
-    - name: "Advertisements"
+    - name: "What the Advertisers Sold"
       url: "/advertisements"
       weight: 30
+    - name: "What the Editors Reprinted"
+      url: "/maps"
+      weight: 40
     - name: "Data"
       url: "/data"
-      weight: 40
-    - name: "Maps"
-      url: "/maps"
       weight: 50
     - name: "About"
       url: "/about"
