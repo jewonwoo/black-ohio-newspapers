@@ -49,7 +49,7 @@ top_plotly <- ggplotly(top, width = 800, height = 800)
 top_plotly
 ```
 
-TEXT HERE: Explanation of plot...
+Data of the newspaper topics were collected from the sixteen available newspapers. The categories for the data include literature (short stories, poetry, and drama), morality, Christianity (sermon and church activities), education, politics (elections, colonialism, civil rights movement, and abolitionism), international affairs, humor, crime and justice, community event (conventions of Black citizens), business and economy, and home management. The data measures both frequency and length of a topic because they are not necessarily congruent with each other. 
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
 # Stacked
