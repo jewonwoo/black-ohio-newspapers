@@ -49,7 +49,8 @@ top_plotly <- ggplotly(top, width = 800, height = 800)
 top_plotly
 ```
 
-TEXT HERE: Explanation of plot...
+While politics steadily remained to be a priority, new topics such as morality and house management emerged significantly, as newspapers aimed at more diversifying readership in the later nineteenth-century. This change also implies that Black residents in Ohio at the end of the century had a political influence, bolstered by the growth of their economic and cultural power, more than the earlier generations. 
+
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
 # Stacked
