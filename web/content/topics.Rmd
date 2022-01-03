@@ -51,6 +51,7 @@ top_plotly
 
 While politics steadily remained to be a priority, new topics such as morality and house management emerged significantly, as newspapers aimed at more diversifying readership in the later nineteenth-century. This change also implies that Black residents in Ohio at the end of the century had a political influence, bolstered by the growth of their economic and cultural power, more than the earlier generations. 
 
+Data of the newspaper topics were collected from the sixteen available newspapers. The categories for the data include literature (short stories, poetry, and drama), morality, Christianity (sermon and church activities), education, politics (elections, colonialism, civil rights movement, and abolitionism), international affairs, humor, crime and justice, community event (conventions of Black citizens), business and economy, and home management. The data measures both frequency and length of a topic because they are not necessarily congruent with each other. 
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
 # Stacked
