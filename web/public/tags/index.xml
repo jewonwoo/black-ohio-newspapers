@@ -1,36 +1,36 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Black Ohio Newspapers</title>
-    <link>http://chnm-dev.jasonheppler.org/tags/</link>
-    <description>Recent content in Tags on Black Ohio Newspapers</description>
+    <title>Tags on The Ohio Black Press in the 19th Century</title>
+    <link>https://blacknewspapers.rrchnm.org/tags/</link>
+    <description>Recent content in Tags on The Ohio Black Press in the 19th Century</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 01 Dec 2020 21:13:14 -0500</lastBuildDate><atom:link href="http://chnm-dev.jasonheppler.org/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 01 Dec 2020 21:13:14 -0500</lastBuildDate><atom:link href="https://blacknewspapers.rrchnm.org/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>plot</title>
-      <link>http://chnm-dev.jasonheppler.org/tags/plot/</link>
+      <link>https://blacknewspapers.rrchnm.org/tags/plot/</link>
       <pubDate>Tue, 01 Dec 2020 21:13:14 -0500</pubDate>
       
-      <guid>http://chnm-dev.jasonheppler.org/tags/plot/</guid>
+      <guid>https://blacknewspapers.rrchnm.org/tags/plot/</guid>
       <description></description>
     </item>
     
     <item>
       <title>R Markdown</title>
-      <link>http://chnm-dev.jasonheppler.org/tags/r-markdown/</link>
+      <link>https://blacknewspapers.rrchnm.org/tags/r-markdown/</link>
       <pubDate>Tue, 01 Dec 2020 21:13:14 -0500</pubDate>
       
-      <guid>http://chnm-dev.jasonheppler.org/tags/r-markdown/</guid>
+      <guid>https://blacknewspapers.rrchnm.org/tags/r-markdown/</guid>
       <description></description>
     </item>
     
     <item>
       <title>regression</title>
-      <link>http://chnm-dev.jasonheppler.org/tags/regression/</link>
+      <link>https://blacknewspapers.rrchnm.org/tags/regression/</link>
       <pubDate>Tue, 01 Dec 2020 21:13:14 -0500</pubDate>
       
-      <guid>http://chnm-dev.jasonheppler.org/tags/regression/</guid>
+      <guid>https://blacknewspapers.rrchnm.org/tags/regression/</guid>
       <description></description>
     </item>
     

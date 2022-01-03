@@ -1,5 +1,5 @@
 ---
-title: "Maps"
+title: "What the Editors Reprinted"
 ---
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
@@ -9,12 +9,29 @@ library(tidyverse)
 library(readxl)
 
 # Periodical locations
-locations <- read_xlsx("../data-raw/Total Data - Combined Quoted Periodicals.xlsx")
-names(locations) <- tolower(names(locations))
-names(locations) <- gsub(" ", "_", names(locations))
+#locations <- read_xlsx("../data-raw/Total Data - Combined Quoted Periodicals.xlsx")
+#names(locations) <- tolower(names(locations))
+#names(locations) <- gsub(" ", "_", names(locations))
+locations <- read_csv("../../data/locations.csv")
+agents <- read_csv("../../data/agents")
+
+library(tidygeocoder)
+crosswalk <- tibble(state = state.name) %>%
+   bind_cols(tibble(abb = state.abb))
+
+agents <- agents %>% 
+  left_join(crosswalk, by = c("State" = "state"))
+
+agents$loc <- str_c(agents$City, ', ', agents$abb, ', ', agents$Country)
+
+agents_latlon <- agents %>%
+  geocode(loc)
+
+names(agents_latlon) <- tolower(names(agents_latlon))
+names(agents_latlon) <- gsub(" ", "_", names(agents_latlon))
 ```
 
-TEXT HERE: Some explanatory text can go here to explain why the map is important and what users should understand.
+Reprinting pieces from other periodicals and published texts was a common practice in nineteenth century print culture. Many of Black newspapers did not have enough agents, correspondents, and resources to maintain profitable publications, relying heavily on other periodicals as alternative news sources for first-hand reports. In the case of the Black newspapers in this project, total 287 different periodicals were reprinted, quoted, or mentioned, often more than once, in sixty-five issues out of the fourteen newspapers. However, for Black editors, the reprinting practice was not merely a way of saving the cost of newspaper publication. It, rather, was a savvy editorial strategy to establish journalistic authority through direct and indirect conversations among printed materials. Data visualization about reprinted periodicals in the early Black newspapers of Ohio also invites us to spatial thinking in which we can imagine African Americans on the constant move literally and metaphorically to publish and circulate newspapers. 
 
 ```{r echo=FALSE, warning=FALSE, message=FALSE}
 # The following creates a simple leaflet map for displaying the location 
@@ -46,4 +63,35 @@ map <- locations %>% leaflet() %>%
 
 # Display the map.
 map
+```
+
+TEXT HERE: Map of agents...
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+# The following creates a simple leaflet map for displaying the location 
+# of agents.
+
+# We add jitter to help spread out overlapping points.
+agents_latlon$long <- jitter(agents_latlon$long, factor = 0.3) 
+agents_latlon$lat <- jitter(agents_latlon$lat, factor = 0.3) 
+
+# We apply a label to the points.
+agents_latlon$label <- with(agents_latlon, paste(
+  "Agent: ", first_name, " ", last_name, " | ", "Location:", loc))
+
+# Create the map. 
+agents_map <- agents_latlon %>% leaflet() %>% 
+  addProviderTiles(providers$CartoDB.Positron) %>% 
+  addCircleMarkers(
+    lat=agents_latlon$lat, 
+    lng=agents_latlon$long,
+    radius = 5,
+    stroke = FALSE,
+    fillOpacity = 0.5,
+    label = ~label,
+    options = popupOptions(closeButton = TRUE)
+  ) 
+
+# Display the map.
+agents_map
 ```

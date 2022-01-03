@@ -2,41 +2,41 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://chnm-dev.jasonheppler.org/</loc>
+    <loc>https://blacknewspapers.rrchnm.org/</loc>
     <lastmod>2021-12-10T14:09:31-06:00</lastmod>
   </url><url>
-    <loc>http://chnm-dev.jasonheppler.org/categories/</loc>
+    <loc>https://blacknewspapers.rrchnm.org/categories/</loc>
     <lastmod>2020-12-01T21:13:14-05:00</lastmod>
   </url><url>
-    <loc>http://chnm-dev.jasonheppler.org/post/2020-12-01-r-rmarkdown/</loc>
+    <loc>https://blacknewspapers.rrchnm.org/post/2020-12-01-r-rmarkdown/</loc>
     <lastmod>2020-12-01T21:13:14-05:00</lastmod>
   </url><url>
-    <loc>http://chnm-dev.jasonheppler.org/tags/plot/</loc>
+    <loc>https://blacknewspapers.rrchnm.org/tags/plot/</loc>
     <lastmod>2020-12-01T21:13:14-05:00</lastmod>
   </url><url>
-    <loc>http://chnm-dev.jasonheppler.org/post/</loc>
+    <loc>https://blacknewspapers.rrchnm.org/post/</loc>
     <lastmod>2020-12-01T21:13:14-05:00</lastmod>
   </url><url>
-    <loc>http://chnm-dev.jasonheppler.org/categories/r/</loc>
+    <loc>https://blacknewspapers.rrchnm.org/categories/r/</loc>
     <lastmod>2020-12-01T21:13:14-05:00</lastmod>
   </url><url>
-    <loc>http://chnm-dev.jasonheppler.org/tags/r-markdown/</loc>
+    <loc>https://blacknewspapers.rrchnm.org/tags/r-markdown/</loc>
     <lastmod>2020-12-01T21:13:14-05:00</lastmod>
   </url><url>
-    <loc>http://chnm-dev.jasonheppler.org/tags/regression/</loc>
+    <loc>https://blacknewspapers.rrchnm.org/tags/regression/</loc>
     <lastmod>2020-12-01T21:13:14-05:00</lastmod>
   </url><url>
-    <loc>http://chnm-dev.jasonheppler.org/tags/</loc>
+    <loc>https://blacknewspapers.rrchnm.org/tags/</loc>
     <lastmod>2020-12-01T21:13:14-05:00</lastmod>
   </url><url>
-    <loc>http://chnm-dev.jasonheppler.org/about/</loc>
+    <loc>https://blacknewspapers.rrchnm.org/about/</loc>
   </url><url>
-    <loc>http://chnm-dev.jasonheppler.org/advertisements/</loc>
+    <loc>https://blacknewspapers.rrchnm.org/data/</loc>
   </url><url>
-    <loc>http://chnm-dev.jasonheppler.org/data/</loc>
+    <loc>https://blacknewspapers.rrchnm.org/advertisements/</loc>
   </url><url>
-    <loc>http://chnm-dev.jasonheppler.org/maps/</loc>
+    <loc>https://blacknewspapers.rrchnm.org/maps/</loc>
   </url><url>
-    <loc>http://chnm-dev.jasonheppler.org/topics/</loc>
+    <loc>https://blacknewspapers.rrchnm.org/topics/</loc>
   </url>
 </urlset>

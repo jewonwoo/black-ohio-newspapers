@@ -1,5 +1,5 @@
 ---
-title: "Advertisements"
+title: "What the Advertisers Sold"
 ---
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
@@ -28,7 +28,7 @@ ad_1880s <- ad_1880s %>% rename(frequency = Frequency)
 advertisements <- rbind(ad_1840s, ad_1860s, ad_1870s, ad_1880s, ad_1890s)
 ```
 
-TEXT HERE: Explanation of the plots...
+In addition to subscribers, advertisements in newspapers serve more than as a financial source to sustain these papers. They offer a picture of the society that publishers, editors, and readers shape together in the medium of commercial goods and services. In particular, Black newspapers suggest the ways in which African Americans participated in the American economy at the time when political denial of Black citizenship hampered their economic advancement as well. 
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
 library(tidyverse)
@@ -53,7 +53,7 @@ ads_plotly <- ggplotly(ads_multiple, width = 800, height = 800)
 ads_plotly
 ```
 
-TEXT HERE: Explanation of the plot...
+As the overview of the advertisements  published in the Ohio Black newspapers in the 19th century suggests, African Americans in the state gradually came to have various types of business. This diversifying trend of Black consumers/readers’ interests were congruent with the increasing Black population and opportunities for politics, education, and economy throughout the century. 
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
 # Stacked
@@ -66,7 +66,7 @@ ads_stacked_plotly <- ggplotly(ads_stacked, width = 800, height = 800)
 ads_stacked_plotly
 ```
 
-TEXT HERE: Some treemap explanation...
+In the last decade of the 19th century, the Black newspapers in Ohio show that both categories and frequency of advertisements increased, indicating a large number of African Americans settled in urban and educational centers. Many publishers and editors of the newspapers were also business owners (P.W. Chavers of the Columbus Standard), educators (Elmer W.B. Curry of The Informer and D.H.V. Purnell of the Ohio Standard and Observer), and politicians (Harry C. Smith of the Cleveland Gazette) who employed the press as a vehicle for their messages on these career-related interests that would advance the life of African Americans. Advertising in their papers was not an exception for this practice. The editors viewed that subscribers were not limited to those who could purchase advertised items and services, but they were also prospective students, citizens with political power, and future business partners. 
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
 # Treemap
