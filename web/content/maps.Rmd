@@ -65,7 +65,7 @@ map <- locations %>% leaflet() %>%
 map
 ```
 
-TEXT HERE: Map of agents...
+Black newspaper editors could collect and reprint a variety of contemporary periodicals by hiring agents. Agents recruited subscribers, collected fees, delivered printed copies, and sent news including other papers to designated regions, while most of them maintained their own occupations. The _Palladium of Liberty_ (1843-1844) is notable because at least 116 agents from five different states and even from England served the paper, as it published their names and locations. This interactive map below shows that the agents of the Palladium of Liberty were active in the Midwest.
 
 ```{r echo=FALSE, warning=FALSE, message=FALSE}
 # The following creates a simple leaflet map for displaying the location 
