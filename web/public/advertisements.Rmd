@@ -68,7 +68,7 @@ ads_stacked_plotly
 
 In the last decade of the 19th century, the Black newspapers in Ohio show that both categories and frequency of advertisements increased, indicating a large number of African Americans settled in urban and educational centers. Many publishers and editors of the newspapers were also business owners (P.W. Chavers of the Columbus Standard), educators (Elmer W.B. Curry of The Informer and D.H.V. Purnell of the Ohio Standard and Observer), and politicians (Harry C. Smith of the Cleveland Gazette) who employed the press as a vehicle for their messages on these career-related interests that would advance the life of African Americans. Advertising in their papers was not an exception for this practice. The editors viewed that subscribers were not limited to those who could purchase advertised items and services, but they were also prospective students, citizens with political power, and future business partners. 
 
-```{r echo=FALSE, message=FALSE, warning=FALSE}
+```{r echo=FALSE, message=FALSE, warning=FALSE, results='hide'}
 # Treemap
 ads_tree <- treemap(
   advertisements, 
